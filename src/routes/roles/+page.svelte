@@ -5,6 +5,7 @@
 
   let roles: Role[] = [];
 
+
   let pageNumber: number = 0;
   let totalPages: number = 0;
 
@@ -39,9 +40,7 @@
     filterType = target.value;
   }
 
-  const handleSearch = async (event: Event) => {
-    event.preventDefault();
-
+  const handleSearch = async () => {
     if (!filterType || !searchContent) {
       alert("Debe seleccionar un filtro y escribir un texto para buscar");
       return;
@@ -106,17 +105,23 @@
     </div>
 
     <!-- Search -->
-    <div class="search-bar" style="margin-bottom: 20px;">
-      <div class="input-group mb-">
+    <div class="search-bar input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Buscar...</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" bind:value={searchContent} />
+        <input 
+          type="text"
+          class="form-control"
+          id="search"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          bind:value={searchContent}
+          on:keydown={e => e.key === 'Enter' ? handleSearch() : null}
+        />
         <select class="form-control" on:change={handleFilterChange}>
           <option value="" disabled selected>Tipo</option>
           <option value="nombre">Nombre</option>
           <option value="descripcion">Descripción</option>
         </select>
         <button class="btn btn-primary" on:click={handleSearch}><i class="fas fa-search"></i></button>
-      </div>
     </div>
 
     <!-- Sort -->

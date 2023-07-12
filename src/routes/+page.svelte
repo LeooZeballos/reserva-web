@@ -37,7 +37,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+  }
+
+    /* three items per row */
+
+  .container > div {
+    flex-basis: 75%;
   }
 
   .buttons {

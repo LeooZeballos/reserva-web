@@ -1,5 +1,5 @@
 <script>
-  import './styles.css';
+  import './styles.scss';
 </script>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -44,17 +44,3 @@
     </div>
   </div>
 </footer>
-
-<style>
-  footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-
-  footer p {
-    margin: 0;
-    padding: 20px;
-  }
-
-</style>

@@ -1,3 +1,15 @@
+/* Page object from Java Spring Boot */
+export interface Page<T> {
+  content: T[];
+  totalPages: number; 
+  totalElements: number;
+  last: boolean;
+  size: number;
+  number: number;
+  numberOfElements: number;
+  first: boolean;
+  empty: boolean;
+}
 export interface Recurso {
   id: number;
   nombre: string;
