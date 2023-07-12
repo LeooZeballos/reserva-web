@@ -35,12 +35,8 @@
 
 <slot />
 
-<footer>
-  <div class="container-fluid bg-body-secondary">
-    <div class="row">
-      <div class="col-12 text-center">
-        <p class="text-muted">Reserva Application &copy; 2023</p>
-      </div>
-    </div>
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="text-muted text-center">Reserva © 2023</span>
   </div>
 </footer>
