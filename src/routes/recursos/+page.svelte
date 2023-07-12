@@ -103,7 +103,7 @@
     </div>
 
     <!-- Search -->
-    <div class="search-bar" style="margin-bottom: 20px;">
+    <div class="search-bar">
       <div class="input-group mb-">
         <span class="input-group-text" id="inputGroup-sizing-default">Buscar...</span>
         <input 
@@ -125,7 +125,7 @@
     </div>
 
     <!-- Sort -->
-    <div class="sort-bar" style="margin-bottom: 20px;">
+    <div class="sort-bar">
       <div class="input-group mb-3">
         <span class="input-group-text" id="inputGroup-sizing-default">Orderar por: </span>
         <select class="form-control" bind:value={sortBy} on:change={handleSortChange} id="sort">
